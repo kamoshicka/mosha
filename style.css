@@ -177,41 +177,44 @@ header .header-copyright {
   stroke-dashoffset: 1000;
 }
 .hero #lottie .s {
-  width: 12rem;
+  width: 20%;
 }
 .hero #lottie .h {
-  width: 12rem;
+  width: 20%;
 }
 .hero #lottie .o {
-  width: 12rem;
-  left: 40vw;
-  top: 20vh;
+  width: 20%;
+  left: 41vw;
+  top: 12vh;
 }
 .hero #lottie .i {
-  width: 12rem;
-  left: 66vw;
-  top: 56vh;
+  width: 20%;
+  left: 64vw;
+  top: 48vh;
 }
 .hero #lottie .n {
-  width: 12rem;
   left: 77vw;
-  top: 45vh;
+  top: 38vh;
+  width: 20%;
 }
 .hero #lottie .s1 {
-  top: 19vh;
-  left: 13vw;
+  top: 10vh;
+  left: 10vw;
+  width: 20%;
 }
 .hero #lottie .h1 {
-  top: 33vh;
-  left: 25vw;
+  top: 21vh;
+  left: 24vw;
+  width: 20%;
 }
 .hero #lottie .s2 {
-  left: 45vw;
-  top: 54vh;
+  left: 43vw;
+  top: 45vh;
+  width: 20%;
 }
 .hero #lottie .h2 {
-  left: 56vw;
-  top: 66vh;
+  left: 55vw;
+  top: 58vh;
 }
 .hero .fv-img-01 {
   position: absolute;
@@ -235,7 +238,7 @@ header .header-copyright {
   position: absolute;
   z-index: -1;
   width: 9rem;
-  left: 36vw;
+  left: 37vw;
   top: 37vh;
 }
 .hero .img-04 {
