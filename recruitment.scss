@@ -247,25 +247,45 @@ main .container {
 .recruiting {
   width: 100%;
   background-color: #d92b44;
+
   .recruiting-about {
     width: 92%;
     background-color: #fcf9f4;
     margin: 0 auto;
     height: 75vh;
+
     ul {
       display: flex;
       padding: 5rem;
       gap: 5rem;
+
+      .hover-img {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+
+      .active {
+        display: block;
+        opacity: 1;
+      }
+
       li {
         display: flex;
         justify-content: center;
         height: 24vh;
         width: 50%;
         position: relative;
+
         img {
           height: 24vh;
-          display: none;
+          z-index: 2;
+          position: absolute;
         }
+
+        a:hover {
+          color: #fff;
+        }
+
         a {
           position: relative;
           display: flex;
@@ -273,39 +293,53 @@ main .container {
           align-items: center;
           flex-direction: column;
           gap: .4rem;
-          width: 95%;
+          width: 100%;
           overflow: hidden;
           z-index: 1;
+          transition: all .4s ease-in-out;
+
           h3 {
             font-size: 2.2rem;
             font-weight: bold;
             border-bottom: 1px solid;
+            z-index: 3;
           }
+
           p {
             font-size: .9rem;
             font-weight: bold;
+            z-index: 3;
           }
         }
+
+        a::before:hover {
+          border: 1px solid #fff;
+        }
+
         a::before {
           content: "";
           position: absolute;
-          z-index: 1;
+          z-index: 3;
           top: 5%;
-          left: 0;
-          right: 0;
+          left: 2%;
+          right: 2%;
           bottom: 5%;
-          border: 1px solid #d92b44;;
+          border: 1px solid #d92b44;
         }
-        }
-      }
-      li:nth-child(1) {
-        background-color: #ffedef;
-      }
-      li:nth-child(2) {
-        background-color: #e3f2ff;
       }
     }
+
+    li:nth-child(1) {
+      background-color: #ffedef;
+    }
+
+    li:nth-child(2) {
+      background-color: #e3f2ff;
+    }
   }
+
+}
+
 .recruiting-about-title {
   display: flex;
   padding-top: 5rem;
@@ -314,15 +348,17 @@ main .container {
   align-items: center;
   width: 100%;
 }
+
 .recruiting-about-title::before {
-  content:"";
-  flex:1;
+  content: "";
+  flex: 1;
   margin-right: 5vw;
   border-bottom: 1px solid #d92b44;
 }
+
 .recruiting-about-title::after {
-  content:"";
-  flex:1;
+  content: "";
+  flex: 1;
   margin-left: 5vw;
   border-bottom: 1px solid #d92b44;
 }

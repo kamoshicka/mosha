@@ -253,6 +253,14 @@ main .container .recruitment-main .recruitment-about p {
   padding: 5rem;
   gap: 5rem;
 }
+.recruiting .recruiting-about ul .hover-img {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+.recruiting .recruiting-about ul .active {
+  display: block;
+  opacity: 1;
+}
 .recruiting .recruiting-about ul li {
   display: flex;
   justify-content: center;
@@ -262,7 +270,11 @@ main .container .recruitment-main .recruitment-about p {
 }
 .recruiting .recruiting-about ul li img {
   height: 24vh;
-  display: none;
+  z-index: 2;
+  position: absolute;
+}
+.recruiting .recruiting-about ul li a:hover {
+  color: #fff;
 }
 .recruiting .recruiting-about ul li a {
   position: relative;
@@ -271,26 +283,32 @@ main .container .recruitment-main .recruitment-about p {
   align-items: center;
   flex-direction: column;
   gap: 0.4rem;
-  width: 95%;
+  width: 100%;
   overflow: hidden;
   z-index: 1;
+  transition: all 0.4s ease-in-out;
 }
 .recruiting .recruiting-about ul li a h3 {
   font-size: 2.2rem;
   font-weight: bold;
   border-bottom: 1px solid;
+  z-index: 3;
 }
 .recruiting .recruiting-about ul li a p {
   font-size: 0.9rem;
   font-weight: bold;
+  z-index: 3;
+}
+.recruiting .recruiting-about ul li a::before:hover {
+  border: 1px solid #fff;
 }
 .recruiting .recruiting-about ul li a::before {
   content: "";
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   top: 5%;
-  left: 0;
-  right: 0;
+  left: 2%;
+  right: 2%;
   bottom: 5%;
   border: 1px solid #d92b44;
 }

@@ -504,6 +504,16 @@ main .container {
       padding: 5rem;
       gap: 5rem;
 
+      .hover-img {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+
+      .active {
+        display: block;
+        opacity: 1;
+      }
+
       li {
         display: flex;
         justify-content: center;
@@ -513,7 +523,12 @@ main .container {
 
         img {
           height: 24vh;
-          display: none;
+          z-index: 2;
+          position: absolute;
+        }
+
+        a:hover {
+          color: #fff;
         }
 
         a {
@@ -523,32 +538,38 @@ main .container {
           align-items: center;
           flex-direction: column;
           gap: .4rem;
-          width: 95%;
+          width: 100%;
           overflow: hidden;
           z-index: 1;
+          transition: all .4s ease-in-out;
 
           h3 {
             font-size: 2.2rem;
             font-weight: bold;
             border-bottom: 1px solid;
+            z-index: 3;
           }
 
           p {
             font-size: .9rem;
             font-weight: bold;
+            z-index: 3;
           }
+        }
+
+        a::before:hover {
+          border: 1px solid #fff;
         }
 
         a::before {
           content: "";
           position: absolute;
-          z-index: 1;
+          z-index: 3;
           top: 5%;
-          left: 0;
-          right: 0;
+          left: 2%;
+          right: 2%;
           bottom: 5%;
           border: 1px solid #d92b44;
-          ;
         }
       }
     }
@@ -561,6 +582,7 @@ main .container {
       background-color: #e3f2ff;
     }
   }
+
 }
 
 .recruiting-about-title {
