@@ -35,3 +35,20 @@ $(function () {
     touchMove: false,
   });
 });
+
+$(function () {
+  $('.js-slider-interview').slick ({
+    autoplay: true,
+    fade: true,
+    cssEase: 'linear',
+    speed: 300,
+    arrows: false,
+    dots: true,
+    infinite: true,
+  });
+});
+
+// modal
+$(".openbtn1").click(function () {
+  $(this).toggleClass('active');
+});

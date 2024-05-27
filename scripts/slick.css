@@ -117,3 +117,15 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+
+@media screen and (max-width: 400px)  {
+    .slick-initialized {
+        .slick-slide {
+        /* display: none; */
+    }
+    .slick-slide {
+        height: 55vh;
+      }
+}
+}
